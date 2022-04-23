@@ -44,7 +44,7 @@ int main() {
     rad = sex / 180;
   }
 
-  printf("%.2lf°\n%.2lfᵍ\n%.2lf rad\n", sex, cen, rad);
+  printf("%.2lf°\n%.2lfᵍ\n%.2lfπ rad\n", sex, cen, rad);
 
   return 0;
 }
