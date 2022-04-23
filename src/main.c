@@ -7,24 +7,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main(int argc, char *argv[]) {
   double a; // bebesita
-
-  while (1) {
-    char inp[16];
-    printf("Angle: ");
-    scanf("%s", inp);
-
-    if ((a = strtod(inp, NULL))) {
-      break;
-    }
-  }
-
   char unit = ' ';
 
-  while (unit != 's' && unit != 'c' && unit != 'r') {
-    printf("Sexagesimal/Centesimal/Radian [s/c/r]: ");
-    scanf(" %s", &unit);
+  if (argc == 3) {
+    a = strtod(argv[1], NULL);
+    unit = argv[2][0];
+  }
+  else {
+    while (1) {
+      char inp[16];
+      printf("Angle: ");
+      scanf("%s", inp);
+
+      if ((a = strtod(inp, NULL))) {
+        break;
+      }
+    }
+
+    while (unit != 's' && unit != 'c' && unit != 'r') {
+      printf("Sexagesimal/Centesimal/Radian [s/c/r]: ");
+      scanf(" %s", &unit);
+    }
   }
 
   double sex, cen, rad;
