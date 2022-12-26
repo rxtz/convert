@@ -34,9 +34,6 @@ int main(int argc, char *argv[]) {
 
   double sex, cen, rad;
 
-  // C
-  // (unit == 's') ? sex = a : (unit == 'c') ? cen = a : (rad = a);
-
   ((unit == 's') ? sex : (unit == 'c') ? cen : rad) = a;
 
   if (unit != 's') {
