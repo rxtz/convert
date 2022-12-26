@@ -66,7 +66,8 @@ int main(int argc, char *argv[]) {
     cout << YELLOW "Absolute zero" RESET << endl;
   }
 
-  cout << c << " °C" << endl
+  cout
+    << c << " °C" << endl
     << f << " °F" << endl
     << k << " K" << endl;
 
