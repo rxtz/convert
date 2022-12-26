@@ -1,5 +1,5 @@
 /**
- * Angle Converter
+ * angle
  * @author rxtz
  * @date 2022-04-15
  */
@@ -34,10 +34,10 @@ int main(int argc, char *argv[]) {
 
   double sex, cen, rad;
 
-  // Expression is not assignable. C++ valid
-  // ((unit == 's') ? sex : (unit == 'c') ? cen : rad) = a;
+  // C
+  // (unit == 's') ? sex = a : (unit == 'c') ? cen = a : (rad = a);
 
-  (unit == 's') ? sex = a : (unit == 'c') ? cen = a : (rad = a);
+  ((unit == 's') ? sex : (unit == 'c') ? cen : rad) = a;
 
   if (unit != 's') {
     sex = (unit == 'c') ? cen * 9 / 10 : rad * 180;
